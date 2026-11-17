@@ -22,6 +22,13 @@ Couch arcade games for the Pixel Wall. Every game is drawn in LED pixels (128×6
 | Bumper Brawl | you vs 3 CPU cars | 2 people + 2 CPU: knock everyone off the platform (pits, saws, ice), first to 3 rounds |
 | Hot Dawg | you vs 3 CPU cars | 2 people + 2 CPU: bump to pass the hot dog before it pops, first to 3 rounds |
 | Bumper Hockey | you + CPU vs 2 CPU | P1 + CPU vs P2 + CPU, first to 5 |
+| Bomber Dawgs | you vs 3 CPU | 2 people + 2 CPU: Bomberman, power-ups, arena closes in, first to 3 rounds |
+| Pup-Man | high score | co-op Pac-Man, shared lives |
+| Joust | high score | co-op, flap to stay above the buzzards |
+| Galaga | high score | co-op |
+| Frogger | high score | race: both pups hop at once, most points wins |
+| Missile Command | high score | co-op, a crosshair each |
+| Kaboom! | high score | co-op, a bucket stack each |
 | Pong | vs CPU | versus, first to 11 |
 | Warlords | you vs 3 CPU castles | 2 people + 2 CPU: guard your king, break the other castles |
 | Outlaw | vs CPU | western gunfight, ricochets, first to 10 |

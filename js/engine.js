@@ -1,7 +1,7 @@
 // Dawg Arcade engine: game menu with attract demos, 1P / 2P select, ready-go, pause, game over, best scores.
 // Runs at any screen size (W x H in LEDs). Games only see the `g` object and draw into a Frame.
-import { Frame, mix } from './lib/pixel.js?v=4';
-import { Input } from './input.js?v=4';
+import { Frame, mix } from './lib/pixel.js?v=5';
+import { Input } from './input.js?v=5';
 
 export const COLORS = [[70, 170, 255], [255, 110, 60], [90, 230, 110], [200, 110, 255]];
 export const NAMES = ['P1', 'P2', 'CPU', 'CPU'];

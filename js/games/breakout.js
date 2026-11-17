@@ -1,5 +1,5 @@
 // Fetch Breakout: knock out the bricks. 2 players share the bottom, one paddle each, and share 3 lives.
-import { hsv } from '../lib/pixel.js?v=4';
+import { hsv } from '../lib/pixel.js?v=5';
 const hyp = Math.hypot, clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const LAYOUTS = [
   r => true,

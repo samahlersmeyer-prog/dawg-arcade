@@ -1,6 +1,6 @@
 // Hot Dawg: hot potato in bumper cars. Whoever has the sizzling hot dog when the timer runs out is out.
 // Bump someone to hand it off. Last car left wins the round; first to 3 rounds.
-import { makeCars, drive, bumps, walls, toward, sparks, drawCar, drawSparks, hyp, label, winTitle } from './bumper-core.js?v=4';
+import { makeCars, drive, bumps, walls, toward, sparks, drawCar, drawSparks, hyp, label, winTitle } from './bumper-core.js?v=5';
 
 const FLOOR = [28, 22, 18], FLOOR2 = [34, 27, 22], WALL = [150, 90, 40];
 

@@ -1,6 +1,6 @@
 // Bumper Hockey: 2 on 2 in bumper cars with a big puck. First team to 5.
 // 2 players: P1 + a CPU teammate vs P2 + a CPU teammate.  1 player: you + a CPU teammate vs 2 CPUs.
-import { makeCars, drive, bumps, walls, toward, sparks, drawCar, drawSparks, hyp, clamp } from './bumper-core.js?v=4';
+import { makeCars, drive, bumps, walls, toward, sparks, drawCar, drawSparks, hyp, clamp } from './bumper-core.js?v=5';
 
 const ICE = [24, 34, 52], LINE = [60, 80, 120], RED = [120, 40, 50];
 
