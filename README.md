@@ -14,10 +14,14 @@ Couch arcade games for the Pixel Wall. Every game is drawn in LED pixels (128×6
 - **Start** or **P** pauses (Resume / Restart / Quit).
 - **Select + Start**, **Esc** or **Home** goes back to the home menu.
 - In a 1-player game, any controller or either set of keys works.
+- Bumper car games: push the D-pad the way you want to drive; **A** = turbo bump (recharges in about 2 seconds).
 
 ## Games
 | Game | 1 player | 2 players |
 |---|---|---|
+| Bumper Brawl | you vs 3 CPU cars | 2 people + 2 CPU: knock everyone off the platform (pits, saws, ice), first to 3 rounds |
+| Hot Dawg | you vs 3 CPU cars | 2 people + 2 CPU: bump to pass the hot dog before it pops, first to 3 rounds |
+| Bumper Hockey | you + CPU vs 2 CPU | P1 + CPU vs P2 + CPU, first to 5 |
 | Light Cycles | you vs 3 CPU bikes | 2 people + 2 CPU bikes, first to 3 rounds |
 | Air Hockey | vs CPU | versus, first to 7 |
 | Tank Duel | vs CPU | versus, first to 5 hits (shells bounce twice) |

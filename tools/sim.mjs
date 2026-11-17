@@ -11,7 +11,7 @@ const [W, H] = size.split('x').map(Number);
 const out = '/tmp/arcade'; mkdirSync(out, { recursive: true });
 
 
-const keys = which === 'all' ? readdirSync(new URL('../js/games/', import.meta.url)).filter(f => f !== 'index.js').map(f => f.replace('.js', '')) : [which];
+const keys = which === 'all' ? readdirSync(new URL('../js/games/', import.meta.url)).filter(f => f !== 'index.js' && f !== 'bumper-core.js').map(f => f.replace('.js', '')) : [which];
 for (const k of keys) {
   const def = (await import(`../js/games/${k}.js`)).default;
   // 1) demo: all CPU, several games back to back
