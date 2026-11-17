@@ -41,6 +41,8 @@ Default is 128×64 (2 panels). For a different wall add `?size=` once, e.g. `?si
 ## Adding a game
 Make `js/games/<name>.js` exporting `{ key, name, tag: 'VERSUS'|'CO-OP', blurb, solo, duo, init(g), update(g, dt, pads), draw(g, f) }`, list it in `js/games/index.js`, and give it CPU play (the menu uses CPU-vs-CPU as its attract demo). Check with `node tools/sim.mjs <name> 120` (runs CPU and random-button games headless) and `node tools/shots.mjs 128x64` (PNG snapshots in /tmp/shots).
 
+After changing code run `sh tools/bump.sh N` (next number) so browsers load the new version.
+
 `js/lib/font.js` is copied from the pixel-wall repo; `pixel.js` and `led-canvas.js` are size-flexible versions of the wall's renderer.
 
 Big Dawg Daily is a separate app and is not touched by this repo.

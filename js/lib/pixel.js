@@ -1,6 +1,6 @@
 // Pixel frame for the arcade. Same drawing calls as the Pixel Wall renderer, but any size,
 // so the arcade fits however many LED panels the wall ends up with.
-import { glyph, advance, GLYPH_W, GLYPH_H } from './font.js';
+import { glyph, advance, GLYPH_W, GLYPH_H } from './font.js?v=4';
 
 export function hex(c) {
   if (Array.isArray(c)) return c;

@@ -1,6 +1,6 @@
 // Bumper Brawl: 4 bumper cars on a floating platform with pits, saws and an ice patch.
 // Knock everyone off. Last car on the platform wins the round; first to 3 rounds. The platform shrinks over time.
-import { makeCars, drive, bumps, toward, sparks, drawCar, drawSparks, hyp, clamp, label, winTitle } from './bumper-core.js';
+import { makeCars, drive, bumps, toward, sparks, drawCar, drawSparks, hyp, clamp, label, winTitle } from './bumper-core.js?v=4';
 
 const DECK = [70, 60, 90], DECK2 = [55, 48, 72], EDGE = [255, 200, 60], ICE = [120, 200, 255], PIT = [0, 0, 0];
 
