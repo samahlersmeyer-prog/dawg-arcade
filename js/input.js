@@ -17,12 +17,13 @@ const blank = () => Object.fromEntries(BTN.map(b => [b, false]));
 export class Input {
   constructor() {
     this.kb = [blank(), blank()];
+    this.tap = [blank(), blank()];   // a quick tap that started and ended between two frames still counts
     this.prev = [blank(), blank()];
     this.cur = [blank(), blank()];
     this.any = blank(); this.anyPrev = blank();
     this.pads = 0;
     if (typeof addEventListener === 'function') {
-      addEventListener('keydown', e => { const k = KEYS[e.code]; if (k) { this.kb[k[0]][k[1]] = true; e.preventDefault(); } });
+      addEventListener('keydown', e => { const k = KEYS[e.code]; if (k) { this.kb[k[0]][k[1]] = true; this.tap[k[0]][k[1]] = true; e.preventDefault(); } });
       addEventListener('keyup', e => { const k = KEYS[e.code]; if (k) this.kb[k[0]][k[1]] = false; });
       addEventListener('blur', () => { this.kb = [blank(), blank()]; });
     }
@@ -30,7 +31,11 @@ export class Input {
   // Call once per frame. players = 1 or 2 (how many humans are in the game).
   poll(players = 2) {
     this.prev = this.cur; this.anyPrev = this.any;
-    const p = [{ ...this.kb[0] }, { ...this.kb[1] }];
+    const p = [0, 1].map(i => Object.fromEntries(BTN.map(b => [b, this.kb[i][b] || this.tap[i][b]])));
+    // a tap shows as "down" for one frame, then must show "up" for one frame so the next tap is a new press
+    if (this.tapUp) { for (const i of [0, 1]) for (const b of BTN) if (this.tapUp[i][b] && !this.kb[i][b]) p[i][b] = false; }
+    this.tapUp = this.tap.map((t, i) => Object.fromEntries(BTN.map(b => [b, t[b] && !this.kb[i][b]])));
+    this.tap = [blank(), blank()];
     const gps = (typeof navigator !== 'undefined' && navigator.getGamepads ? [...navigator.getGamepads()] : []).filter(Boolean);
     this.pads = gps.length;
     gps.slice(0, 2).forEach((gp, i) => {
@@ -40,7 +45,7 @@ export class Input {
       if (b(8) && b(9)) s.home = true; else s.start ||= b(9);
     });
     // Keyboard "P" and "Esc" belong to whoever: copy to both
-    for (const k of ['start', 'home']) if (this.kb[0][k]) p[1][k] = true;
+    for (const k of ['start', 'home']) if (p[0][k]) p[1][k] = true;
     if (players === 1) for (const k of BTN) p[0][k] = p[0][k] || p[1][k];
     this.cur = p;
     this.any = Object.fromEntries(BTN.map(k => [k, p[0][k] || p[1][k]]));
